@@ -1,0 +1,111 @@
+g
+
+prob -- 2
+-------------
+gridTraveler(s, e)
+
+--> find all paths to traverse start to end in a (m * n ) grid
+--> we can only move right and down
+
+    2 * 3  --> 2 rows, 3 cols
+
+        s   .   .
+        .   .   e
+
+        => The paths we can follow
+            down, right, right
+            right, down, right
+            right, right, down
+
+    gridTraveler(2, 3) -> 3
+
+    gridTraveler(1, 1) -> 1  --> it has only one grif
+
+    gridTraveler(0, 1) -> 0    --> invalid
+
+    gridTraveler(1, 0) -> 0     --> invalid
+
+    gridTraveler(8, 0) -> 0     --> invalid (if any one  arg is 0 then res = 0)
+
+
+                     2, 3
+        1, 3                    2, 2
+    0, 3    1, 2           1, 2       2, 1
+          0,2  1,1       0,2  1,1    1,1  2, 0
+
+    
+    left -> down 
+    right  -> right
+
+    2,3     2,2     2,1
+    1,3     1,2     1,1
+
+
+Tiem Complexity -> 2 ^ (m + n)
+Space Complexity -> m + n
+
+if we check 
+    gridTraveler(1, 2) -> 2
+    gridTraveler(2, 1) -> 2
+
+    i.e here order doesn't matter, we can memoize (m + n)
+        5, 3 == 3, 5
+        4, 7 == 7, 4 
+
+
+
+problem - 2 
+---------------
+canSum memoize
+
+canSum(target=7, arr=[5,3,4,7]) -> True
+
+if we can add some nums from and make 7 -> True
+
+canSum(7, [1, 2, 3]) -> False
+
+canSum(target=7, arr=[5,3,4,7]) -> True
+
+    less than 0 is not valid
+
+
+                      7
+        -  5/    -3/   -4\     -7\
+           2       4       3       0
+               -3/ -4\   -3|
+                1     0   0
+
+
+if any one is 0 then True.
+
+m = target sum
+n = arr length
+
+time Complexity --> n ^ m
+Space Complexity --> m
+
+if check a large number, it will get repeated nodes, we can add them to memo
+
+after memo
+time Complexity --> n * m
+Space Complexity --> m
+
+
+problem 04
+----------
+howSum
+
+howSum(target=7, arr=[5,3,4,7]) -> [3, 4]
+howSum(7, [2, 4]) --> null
+howSum(0, [1, 2, 3]) --> []
+
+                          7
+          -5/      -3/         -4\      -7\
+           2        4             3         0
+              -3/     -4\       -3/
+               1          0      0
+
+i.e we can make sum = 0
+
+
+
