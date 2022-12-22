@@ -22,7 +22,8 @@ func main() {
 
 func howSum(target int, nums []int) []int {
 	if target == 0 {
-		return []int{}
+		x := []int{}
+		return x
 	}
 	if target < 0 {
 		return nil

@@ -108,4 +108,40 @@ howSum(0, [1, 2, 3]) --> []
 i.e we can make sum = 0
 
 
+time Complexity --> n ^ m
+Space Complexity --> n ^ 2
 
+if check a large number, it will get repeated nodes, we can add them to memo
+
+after memo
+time Complexity -->  n^2 * n
+Space Complexity --> n ^ 2
+
+
+problem 5 --> bestSum
+------------
+
+same but the shortest one only
+
+
+
+                          7
+          -5/      -3/         -4\      -7\
+           2        4             3         0
+              -3/     -4\       -3/
+               1          0      0
+
+
+howSum(target=7, arr=[5,3,4,7]) -> [7]
+howSum(7, [2, 3, 5]) --> [2, 5]
+howSum(0, [1, 2, 3]) --> []
+
+
+time Complexity --> n ^ m
+Space Complexity --> n ^ 2
+
+if check a large number, it will get repeated nodes, we can add them to memo
+
+after memo
+time Complexity -->  n^2 * n
+Space Complexity --> n ^ 2
