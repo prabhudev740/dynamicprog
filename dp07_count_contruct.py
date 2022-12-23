@@ -38,6 +38,6 @@ def main():
     
     print(count_construct_dy('abcdef', ['ab', 'abc', 'cd', 'def', 'abcd'], {}))
     print(count_construct_dy('skateboard',  ['bo', 'rd', 'ate', 't', 'ska', 'sk', 'boar'], {}))
-    print(count_construct_dy('eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef',  ['e', 'ee', 'eee', 'eeee', 'eeeee', 'eeeeeee', 'eeeeeeee'], {}))
+    print(count_construct_dy('eeeeeeeeeeeeeeeeeeeeeeeeeee',  ['e', 'ee', 'eee', 'eeee', 'eeeee', 'eeeeeee', 'eeeeeeee'], {}))
 
 main()

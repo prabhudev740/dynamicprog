@@ -170,7 +170,7 @@ after memo
 time Complexity -->  n * m^2
 Space Complexity --> m ^ 2
 
-problem - 7 --> countSum
+problem - 7 --> countConstruct
 ------------------------
 
 countConstruct(target='abcdef', [ab, abc, cd, def, abcd]) -> 1
@@ -184,3 +184,28 @@ countConstruct(target='skateboard', [bo, rd, ate, t, ska, sk. boar]) -> 0
   ef                      ''      
 
 each time we find "" , count + 1
+
+time Complexity --> n ^ m
+Space Complexity --> m ^ 2
+
+
+after memo
+time Complexity -->  n * m^2
+Space Complexity --> m ^ 2
+
+
+problem - 7 --> allConstruct
+------------------------
+
+allConstruct(target='abcdef', [ab, abc, cd, def, abcd]) -> [[abc, def]]
+allConstruct(target='skateboard', [bo, rd, ate, t, ska, sk. boar]) -> []
+allConstruct(target='', [bo, rd, ate, t, ska, sk, boar]) -> [[]]  ==> one way to create ""
+
+
+                        abcdef
+            /ab            |abc         \abcd
+           cdef           def           ef
+    /cd                    |
+  ef                      ''     
+
+

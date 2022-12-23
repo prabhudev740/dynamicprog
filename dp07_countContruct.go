@@ -3,12 +3,13 @@ package main
 import "strings"
 
 func main() {
-	// println(countConstruct("abcdef", []string{"ab", "abc", "cd", "def", "abcd"}))
-	// println(countConstruct("skateboard", []string{"bo", "rd", "ate", "t", "ska", "sk", "boar"}))
-	// println(countConstruct("eeeeeeeeeeeeeeeeeeeeeeeeeeeef", []string{"e", "ee", "eee", "eeee", "eeeee", "eeeeeee", "eeeeeeee"}))
+	println(countConstruct("abcdef", []string{"ab", "abc", "cd", "def", "abcd"}))
+	println(countConstruct("skateboard", []string{"bo", "rd", "ate", "t", "ska", "sk", "boar"}))
+	println(countConstruct("eeeeeeeeeeeeeeeeeeeeeeeeeeeeef", []string{"e", "ee", "eee", "eeee", "eeeee", "eeeeeee", "eeeeeeee"}))
+
 	println(countConstructDy("abcdef", []string{"ab", "abc", "cd", "def", "abcd"}, map[string]int{}))
 	println(countConstructDy("skateboard", []string{"bo", "rd", "ate", "t", "ska", "sk", "boar"}, map[string]int{}))
-	println(countConstructDy("eeeeeeeeeeeeeeeeeeeeeeeeeeeef", []string{"e", "ee", "eee", "eeee", "eeeee", "eeeeeee", "eeeeeeee"}, map[string]int{}))
+	println(countConstructDy("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeef", []string{"e", "ee", "eee", "eeee", "eeeee", "eeeeeee", "eeeeeeee"}, map[string]int{}))
 }
 
 func countConstructDy(target string, wordBank []string, memo map[string]int) int {
